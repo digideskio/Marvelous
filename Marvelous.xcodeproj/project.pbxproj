@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		FC1750E31A6F395B00BF0D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1750E21A6F395B00BF0D75 /* AppDelegate.swift */; };
-		FC1750E51A6F395B00BF0D75 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1750E41A6F395B00BF0D75 /* MasterViewController.swift */; };
-		FC1750E71A6F395B00BF0D75 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1750E61A6F395B00BF0D75 /* DetailViewController.swift */; };
 		FC1750EA1A6F395B00BF0D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1750E81A6F395B00BF0D75 /* Main.storyboard */; };
 		FC1750EC1A6F395B00BF0D75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1750EB1A6F395B00BF0D75 /* Images.xcassets */; };
 		FC1750EF1A6F395B00BF0D75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1750ED1A6F395B00BF0D75 /* LaunchScreen.xib */; };
 		FC1750FB1A6F395B00BF0D75 /* MarvelousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1750FA1A6F395B00BF0D75 /* MarvelousTests.swift */; };
 		FC1751131A6F435000BF0D75 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FC17510B1A6F425D00BF0D75 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC1751291A6F477300BF0D75 /* CryptoSwift.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FC1751261A6F475B00BF0D75 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC40DE5C1A7057CB001A740A /* CharacterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40DE5B1A7057CB001A740A /* CharacterRequest.swift */; };
+		FC40DE621A7057D9001A740A /* CharacterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40DE611A7057D9001A740A /* CharacterStore.swift */; };
+		FC40DE641A7057E2001A740A /* MarvelCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40DE631A7057E2001A740A /* MarvelCharacter.swift */; };
+		FCBA5BDA1A70567F008A13C2 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBA5BD91A70567F008A13C2 /* Credentials.swift */; };
+		FCCD38A21A6F51CB003A79AD /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD38A11A6F51CB003A79AD /* SwiftyJSON.swift */; };
+		FCCD38A41A6FD5BD003A79AD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD38A31A6FD5BD003A79AD /* MenuViewController.swift */; };
+		FCEA09951A70242800333342 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEA09941A70242800333342 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,20 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
+		FC1751251A6F475B00BF0D75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC1751201A6F475B00BF0D75 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE45519693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
+		FC1751271A6F475B00BF0D75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC1751201A6F475B00BF0D75 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE46019693E190098E6F3;
+			remoteInfo = CryptoSwiftTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +82,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FC1751291A6F477300BF0D75 /* CryptoSwift.framework in Copy Frameworks */,
 				FC1751131A6F435000BF0D75 /* Alamofire.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -73,8 +94,6 @@
 		FC1750DD1A6F395B00BF0D75 /* Marvelous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvelous.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1750E11A6F395B00BF0D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1750E21A6F395B00BF0D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC1750E41A6F395B00BF0D75 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		FC1750E61A6F395B00BF0D75 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FC1750E91A6F395B00BF0D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC1750EB1A6F395B00BF0D75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC1750EE1A6F395B00BF0D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -82,6 +101,14 @@
 		FC1750F91A6F395B00BF0D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1750FA1A6F395B00BF0D75 /* MarvelousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelousTests.swift; sourceTree = "<group>"; };
 		FC1751041A6F425D00BF0D75 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../code/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		FC1751201A6F475B00BF0D75 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = ../../code/CryptoSwift/CryptoSwift.xcodeproj; sourceTree = "<group>"; };
+		FC40DE5B1A7057CB001A740A /* CharacterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterRequest.swift; sourceTree = "<group>"; };
+		FC40DE611A7057D9001A740A /* CharacterStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterStore.swift; sourceTree = "<group>"; };
+		FC40DE631A7057E2001A740A /* MarvelCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelCharacter.swift; sourceTree = "<group>"; };
+		FCBA5BD91A70567F008A13C2 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		FCCD38A11A6F51CB003A79AD /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		FCCD38A31A6FD5BD003A79AD /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		FCEA09941A70242800333342 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +135,7 @@
 				FC1750DF1A6F395B00BF0D75 /* Marvelous */,
 				FC1750F71A6F395B00BF0D75 /* MarvelousTests */,
 				FC1750DE1A6F395B00BF0D75 /* Products */,
+				FC1751201A6F475B00BF0D75 /* CryptoSwift.xcodeproj */,
 				FC1751041A6F425D00BF0D75 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -124,13 +152,15 @@
 		FC1750DF1A6F395B00BF0D75 /* Marvelous */ = {
 			isa = PBXGroup;
 			children = (
+				FCBA5BD81A704EF4008A13C2 /* Controllers */,
+				FCBA5BD31A704EDF008A13C2 /* Models */,
 				FC1750E21A6F395B00BF0D75 /* AppDelegate.swift */,
-				FC1750E41A6F395B00BF0D75 /* MasterViewController.swift */,
-				FC1750E61A6F395B00BF0D75 /* DetailViewController.swift */,
 				FC1750E81A6F395B00BF0D75 /* Main.storyboard */,
 				FC1750EB1A6F395B00BF0D75 /* Images.xcassets */,
 				FC1750ED1A6F395B00BF0D75 /* LaunchScreen.xib */,
 				FC1750E01A6F395B00BF0D75 /* Supporting Files */,
+				FCCD38A11A6F51CB003A79AD /* SwiftyJSON.swift */,
+				FCBA5BD91A70567F008A13C2 /* Credentials.swift */,
 			);
 			path = Marvelous;
 			sourceTree = "<group>";
@@ -168,6 +198,34 @@
 				FC17510F1A6F425D00BF0D75 /* AlamofireTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FC1751211A6F475B00BF0D75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC1751261A6F475B00BF0D75 /* CryptoSwift.framework */,
+				FC1751281A6F475B00BF0D75 /* CryptoSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCBA5BD31A704EDF008A13C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC40DE5B1A7057CB001A740A /* CharacterRequest.swift */,
+				FC40DE611A7057D9001A740A /* CharacterStore.swift */,
+				FC40DE631A7057E2001A740A /* MarvelCharacter.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FCBA5BD81A704EF4008A13C2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCCD38A31A6FD5BD003A79AD /* MenuViewController.swift */,
+				FCEA09941A70242800333342 /* QuizViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +302,10 @@
 					ProductGroup = FC1751051A6F425D00BF0D75 /* Products */;
 					ProjectRef = FC1751041A6F425D00BF0D75 /* Alamofire.xcodeproj */;
 				},
+				{
+					ProductGroup = FC1751211A6F475B00BF0D75 /* Products */;
+					ProjectRef = FC1751201A6F475B00BF0D75 /* CryptoSwift.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -275,6 +337,20 @@
 			remoteRef = FC17510E1A6F425D00BF0D75 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		FC1751261A6F475B00BF0D75 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = FC1751251A6F475B00BF0D75 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FC1751281A6F475B00BF0D75 /* CryptoSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CryptoSwiftTests.xctest;
+			remoteRef = FC1751271A6F475B00BF0D75 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -302,9 +378,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC1750E71A6F395B00BF0D75 /* DetailViewController.swift in Sources */,
-				FC1750E51A6F395B00BF0D75 /* MasterViewController.swift in Sources */,
+				FC40DE621A7057D9001A740A /* CharacterStore.swift in Sources */,
+				FCEA09951A70242800333342 /* QuizViewController.swift in Sources */,
+				FCBA5BDA1A70567F008A13C2 /* Credentials.swift in Sources */,
+				FCCD38A41A6FD5BD003A79AD /* MenuViewController.swift in Sources */,
+				FC40DE641A7057E2001A740A /* MarvelCharacter.swift in Sources */,
 				FC1750E31A6F395B00BF0D75 /* AppDelegate.swift in Sources */,
+				FCCD38A21A6F51CB003A79AD /* SwiftyJSON.swift in Sources */,
+				FC40DE5C1A7057CB001A740A /* CharacterRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +582,7 @@
 				FC1751001A6F395B00BF0D75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC1751011A6F395B00BF0D75 /* Build configuration list for PBXNativeTarget "MarvelousTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +591,7 @@
 				FC1751031A6F395B00BF0D75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
