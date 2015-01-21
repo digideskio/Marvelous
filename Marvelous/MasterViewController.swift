@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamoFire
 
 class MasterViewController: UITableViewController {
 
@@ -21,6 +22,11 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
+        Alamofire.request(.GET, "http://httpbin.org/get").response {
+            (request, response, data, error) in
+            println(response)
+        }
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
