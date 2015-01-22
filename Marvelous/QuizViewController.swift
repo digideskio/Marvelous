@@ -24,8 +24,26 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var bottomRightImageView: UIImageView!
     @IBOutlet weak var bottomRightNameLabel: UILabel!
     
+    @IBAction func rightButton(sender: AnyObject) {
+        quiz.scoreQuestion(true)
+        if let currentQuestion = quiz.currentQuestion() {
+            populateImages(currentQuestion.characters)
+        } else {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
-        let characters = quiz.characters
+        if let currentQuestion = quiz.currentQuestion() {
+            populateImages(currentQuestion.characters)
+        }
+    }
+    
+    func populateImages(characters: [MarvelCharacter]) {
+        topLeftImageView.image = nil
+        topRightImageView.image = nil
+        bottomLeftImageView.image = nil
+        bottomRightImageView.image = nil
         
         fetchImage(characters[0].imageURL!, imageView: topLeftImageView)
         topLeftNameLabel.text = characters[0].name

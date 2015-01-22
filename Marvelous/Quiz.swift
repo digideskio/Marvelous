@@ -9,9 +9,33 @@
 import Foundation
 
 class Quiz: NSObject {
-    var characters: [MarvelCharacter]
+    var questions = [Question]()
+    var currentQuestionIndex = 0
     
     init(characters: [MarvelCharacter]) {
-        self.characters = characters
+        for i in (0...9) {
+            let step = i * 4
+            var questionCharacters = [MarvelCharacter]()
+            
+            for j in (step...(step + 3)) {
+                questionCharacters.append(characters[j])
+            }
+            
+            questions.append(Question(characters: questionCharacters))
+        }
+    }
+    
+    func currentQuestion() -> Question? {
+        if currentQuestionIndex < 10 {
+            return questions[currentQuestionIndex]
+        } else {
+            return nil
+        }
+    }
+    
+    func scoreQuestion(answer: Bool) {
+        currentQuestionIndex++
+        
+        // score the question??
     }
 }

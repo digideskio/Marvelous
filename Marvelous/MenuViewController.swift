@@ -25,8 +25,8 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCount", name: storeUpdated, object: characterStore)
-        loadDataButton.setTitle("Loading...", forState: UIControlState.Disabled)
-        loadDataButton.setTitle("Load Data", forState: UIControlState.Normal)
+        loadDataButton.setTitle("Fetching...", forState: UIControlState.Disabled)
+        loadDataButton.setTitle("Fetch Characters", forState: UIControlState.Normal)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
