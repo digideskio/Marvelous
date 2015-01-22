@@ -19,10 +19,6 @@ class MenuViewController: UIViewController {
         characterStore.fetchNewPage()
     }
     
-    @IBAction func unwindToMenu(sender: UIStoryboardSegue) {
-        // noop
-    }
-    
     override func viewDidLoad() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCount", name: storeUpdated, object: characterStore)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "fetchFailed", name: storeUpdateFailure, object: characterStore)
