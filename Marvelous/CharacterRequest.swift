@@ -14,17 +14,22 @@ let url = "https://gateway.marvel.com/v1/public/characters"
 let limit = "100"
 
 class CharacterRequest: NSObject {
+    let manager: Alamofire.Manager
     let offset: String
     
     required init(offset: String) {
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        configuration.timeoutIntervalForRequest = 10
+        
+        self.manager = Alamofire.Manager(configuration: configuration)
         self.offset = offset
     }
     
-    class func makeRequest(offset: String, fn: (JSON) -> Void) {
-        self(offset: offset).makeRequest(fn)
+    class func makeRequest(offset: String, success: (JSON) -> Void, failure: () -> Void) {
+        self(offset: offset).makeRequest(success, failure: failure)
     }
     
-    func makeRequest(fn: (JSON) -> Void) {
+    func makeRequest(success: (JSON) -> Void, failure: () -> Void) {
         let timestamp = currentTimestamp()
         
         let params = [
@@ -35,12 +40,16 @@ class CharacterRequest: NSObject {
             "limit" : limit
         ]
         
-        Alamofire.request(.GET, url, parameters: params).responseJSON {
+        manager.request(.GET, url, parameters: params).responseJSON {
             (request, response, data, error) in
             
-            if let d: AnyObject = data {
-                let json = JSON(d)
-                fn(json["data"]["results"])
+            if let err = error {
+                failure()
+            } else {
+                if let d: AnyObject = data {
+                    let json = JSON(d)
+                    success(json["data"]["results"])
+                }
             }
         }
     }

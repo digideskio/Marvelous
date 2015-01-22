@@ -9,6 +9,7 @@
 import Foundation
 
 let storeUpdated = "storeUpdated"
+let storeUpdateFailure = "storeUpdateFailure"
 
 class CharacterStore: NSObject, NSCoding {
     var characters = [MarvelCharacter]()
@@ -71,7 +72,12 @@ class CharacterStore: NSObject, NSCoding {
     }
     
     func fetchNewPage() {
-        CharacterRequest.makeRequest(String(currentOffset), parseResults)
+        CharacterRequest.makeRequest(String(currentOffset), parseResults, updateFailure)
+    }
+    
+    func updateFailure() {
+        let notification = NSNotification(name: storeUpdateFailure, object: self)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
     
     func parseResults(results: JSON) {

@@ -25,6 +25,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCount", name: storeUpdated, object: characterStore)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fetchFailed", name: storeUpdateFailure, object: characterStore)
         loadDataButton.setTitle("Fetching...", forState: UIControlState.Disabled)
         loadDataButton.setTitle("Fetch Characters", forState: UIControlState.Normal)
         
@@ -44,5 +45,16 @@ class MenuViewController: UIViewController {
     func updateCount() {
         characterCountLabel.text = "\(characterStore.characters.count) Characters"
         loadDataButton.enabled = true
+    }
+    
+    func fetchFailed() {
+        let alert = UIAlertController(title: "Fetch Failed!", message: "Marvel took too long to respond", preferredStyle: .Alert)
+        
+        let action = UIAlertAction(title: "grumble", style: .Default) { (action) in
+            self.updateCount()
+        }
+        
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, nil)
     }
 }
