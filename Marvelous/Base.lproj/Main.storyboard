@@ -215,7 +215,7 @@
                                         <rect key="frame" x="300" y="0.0" width="300" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZb-EI-CnG">
-                                                <rect key="frame" x="131" y="10" width="37" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                 <state key="normal" title="Right">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -227,15 +227,17 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.65452906468531469" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="centerX" secondItem="jZb-EI-CnG" secondAttribute="centerX" id="QF7-Dj-Ap0"/>
-                                            <constraint firstAttribute="centerY" secondItem="jZb-EI-CnG" secondAttribute="centerY" id="m2B-Pm-fhz"/>
+                                            <constraint firstAttribute="trailing" secondItem="jZb-EI-CnG" secondAttribute="trailing" id="Bt5-5G-Acg"/>
+                                            <constraint firstAttribute="bottom" secondItem="jZb-EI-CnG" secondAttribute="bottom" id="M42-xD-6dp"/>
+                                            <constraint firstItem="jZb-EI-CnG" firstAttribute="leading" secondItem="r8m-h1-aIU" secondAttribute="leading" id="OO5-pD-0ea"/>
+                                            <constraint firstItem="jZb-EI-CnG" firstAttribute="top" secondItem="r8m-h1-aIU" secondAttribute="top" id="ezR-MH-WY2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNS-GL-xwt">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hk-0v-8ni">
-                                                <rect key="frame" x="128" y="10" width="45" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                 <state key="normal" title="Wrong">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -247,8 +249,10 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.94117647059999998" green="0.078431372550000003" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="centerX" secondItem="6Hk-0v-8ni" secondAttribute="centerX" id="EGz-8u-bPm"/>
-                                            <constraint firstAttribute="centerY" secondItem="6Hk-0v-8ni" secondAttribute="centerY" id="g1g-5s-Lw0"/>
+                                            <constraint firstAttribute="bottom" secondItem="6Hk-0v-8ni" secondAttribute="bottom" id="74T-gE-c0R"/>
+                                            <constraint firstItem="6Hk-0v-8ni" firstAttribute="top" secondItem="sNS-GL-xwt" secondAttribute="top" id="P0d-As-Sw0"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Hk-0v-8ni" secondAttribute="trailing" id="k7z-Hi-YdO"/>
+                                            <constraint firstItem="6Hk-0v-8ni" firstAttribute="leading" secondItem="sNS-GL-xwt" secondAttribute="leading" id="ntX-mW-i4r"/>
                                         </constraints>
                                     </view>
                                 </subviews>
