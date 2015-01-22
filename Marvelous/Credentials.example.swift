@@ -8,5 +8,5 @@
 
 import Foundation
 
-let publicKey = "281751a6b2f744347b91ad0ceaeed96a"
-let privateKey = "a7cd586a29c34e04d292f20c03fe9099669d877c"
+let publicKey = "yourpublickey"
+let privateKey = "yourprivatekey"
