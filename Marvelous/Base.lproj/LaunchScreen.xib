@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Some Marvelous Quiz Time Extravaganza" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2n6-b5-grq">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="A Marvelous Quiz Time Extravaganza" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2n6-b5-grq">
                     <rect key="frame" x="20" y="40" width="440" height="400"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
