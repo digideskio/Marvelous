@@ -40,10 +40,12 @@ class QuizViewController: UIViewController {
     }
     
     func populateImages(characters: [MarvelCharacter]) {
-        topLeftImageView.image = nil
-        topRightImageView.image = nil
-        bottomLeftImageView.image = nil
-        bottomRightImageView.image = nil
+        UIView.animateWithDuration(0.25) {
+            self.topLeftImageView.alpha = 0
+            self.topRightImageView.alpha = 0
+            self.bottomLeftImageView.alpha = 0
+            self.bottomRightImageView.alpha = 0
+        }
         
         fetchImage(characters[0].imageURL!, imageView: topLeftImageView)
         topLeftNameLabel.text = characters[0].name
@@ -63,6 +65,10 @@ class QuizViewController: UIViewController {
             (_, _, data, _) in
             let image = UIImage(data: data! as NSData)
             imageView.image = image
+            
+            UIView.animateWithDuration(0.25) {
+                imageView.alpha = 1
+            }
         }
     }
 }
