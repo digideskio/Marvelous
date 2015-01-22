@@ -21,7 +21,9 @@ class Quiz: NSObject {
                 questionCharacters.append(characters[j])
             }
             
-            questions.append(Question(characters: questionCharacters))
+            let shuffle = arc4random_uniform(2) == 0
+            
+            questions.append(Question(characters: questionCharacters, shuffle: shuffle))
         }
     }
     

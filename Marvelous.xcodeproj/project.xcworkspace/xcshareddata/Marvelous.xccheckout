@@ -24,9 +24,9 @@
 		<key>52723C8E7D1627498B85EBC1D965FAD96331BBC9</key>
 		<string>../..</string>
 		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
-		<string>../../../../code/Alamofire</string>
+		<string>../../../code/Alamofire</string>
 		<key>C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53</key>
-		<string>../../../../code/CryptoSwift</string>
+		<string>../../../code/CryptoSwift</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:jonallured/Marvelous.git</string>
