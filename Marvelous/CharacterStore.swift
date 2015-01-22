@@ -14,6 +14,21 @@ class CharacterStore: NSObject {
     var characters = [MarvelCharacter]()
     var currentOffset = 0
     
+    let charactersArchivePath: String = {
+        let documentsDirectories = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentDirectory = documentsDirectories.first as String
+        
+        return documentDirectory.stringByAppendingPathComponent("characters.archive")
+    }()
+    
+    override init() {
+        super.init()
+        
+        if let archivedCharacters = NSKeyedUnarchiver.unarchiveObjectWithFile(charactersArchivePath) as? [MarvelCharacter] {
+            characters = archivedCharacters
+        }
+    }
+    
     func validCharacters() -> [MarvelCharacter] {
         return characters.filter { $0.imageURL != nil }
     }
@@ -58,6 +73,8 @@ class CharacterStore: NSObject {
             let character = MarvelCharacter(marvelId: id, name: name, imageURL: imageURL)
             characters.append(character)
         }
+        
+        NSKeyedArchiver.archiveRootObject(characters, toFile: charactersArchivePath)
         
         let notification = NSNotification(name: storeUpdated, object: self)
         NSNotificationCenter.defaultCenter().postNotification(notification)
