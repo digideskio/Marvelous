@@ -77,6 +77,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yU-LR-2gU">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="275"/>
                                 <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="EFQ-ZR-0vp">
+                                        <rect key="frame" x="140" y="128" width="20" height="20"/>
+                                    </activityIndicatorView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f4a-tE-gus">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="275"/>
                                     </imageView>
@@ -93,8 +96,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="4XS-IU-j2k" secondAttribute="bottom" id="770-7T-1Y9"/>
+                                    <constraint firstAttribute="centerY" secondItem="EFQ-ZR-0vp" secondAttribute="centerY" id="HjK-qg-LhD"/>
                                     <constraint firstAttribute="trailing" secondItem="4XS-IU-j2k" secondAttribute="trailing" id="LPp-wx-yTa"/>
                                     <constraint firstAttribute="bottom" secondItem="f4a-tE-gus" secondAttribute="bottom" id="SC7-Wv-mbc"/>
+                                    <constraint firstAttribute="centerX" secondItem="EFQ-ZR-0vp" secondAttribute="centerX" id="TZT-6K-n50"/>
                                     <constraint firstItem="f4a-tE-gus" firstAttribute="top" secondItem="2yU-LR-2gU" secondAttribute="top" id="Tgp-um-NNj"/>
                                     <constraint firstAttribute="trailing" secondItem="f4a-tE-gus" secondAttribute="trailing" id="a4N-D6-5ij"/>
                                     <constraint firstItem="4XS-IU-j2k" firstAttribute="top" secondItem="f4a-tE-gus" secondAttribute="bottom" id="esP-IT-Fia"/>
@@ -110,6 +115,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lmg-PA-OZA">
                                 <rect key="frame" x="300" y="0.0" width="300" height="275"/>
                                 <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="d6Z-Om-fX4">
+                                        <rect key="frame" x="140" y="128" width="20" height="20"/>
+                                    </activityIndicatorView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V60-Qd-uGf">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="275"/>
                                     </imageView>
@@ -128,15 +136,20 @@
                                     <constraint firstItem="V60-Qd-uGf" firstAttribute="top" secondItem="Lmg-PA-OZA" secondAttribute="top" id="Pjv-xb-k4w"/>
                                     <constraint firstAttribute="bottom" secondItem="V60-Qd-uGf" secondAttribute="bottom" id="Qau-DJ-0zi"/>
                                     <constraint firstAttribute="trailing" secondItem="dfK-dj-E96" secondAttribute="trailing" id="SkQ-WX-I5j"/>
+                                    <constraint firstAttribute="centerX" secondItem="d6Z-Om-fX4" secondAttribute="centerX" id="Xap-dd-78C"/>
                                     <constraint firstItem="V60-Qd-uGf" firstAttribute="leading" secondItem="Lmg-PA-OZA" secondAttribute="leading" id="ZsB-NW-2ze"/>
                                     <constraint firstAttribute="bottom" secondItem="dfK-dj-E96" secondAttribute="bottom" id="kli-xH-Dmh"/>
                                     <constraint firstItem="dfK-dj-E96" firstAttribute="leading" secondItem="Lmg-PA-OZA" secondAttribute="leading" id="pQy-4b-eCE"/>
                                     <constraint firstAttribute="trailing" secondItem="V60-Qd-uGf" secondAttribute="trailing" id="rXK-O4-GPI"/>
+                                    <constraint firstAttribute="centerY" secondItem="d6Z-Om-fX4" secondAttribute="centerY" id="ybw-HT-8GM"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wT1-dV-VED">
                                 <rect key="frame" x="0.0" y="275" width="300" height="275"/>
                                 <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="rY5-A2-b5o">
+                                        <rect key="frame" x="140" y="128" width="20" height="20"/>
+                                    </activityIndicatorView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3py-sg-Fb1">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="275"/>
                                     </imageView>
@@ -158,12 +171,17 @@
                                     <constraint firstAttribute="bottom" secondItem="3py-sg-Fb1" secondAttribute="bottom" id="YVM-Jg-hXw"/>
                                     <constraint firstAttribute="bottom" secondItem="hV6-aX-6Rg" secondAttribute="bottom" id="aFO-ah-eyz"/>
                                     <constraint firstItem="3py-sg-Fb1" firstAttribute="top" secondItem="wT1-dV-VED" secondAttribute="top" id="e85-jZ-Ke0"/>
+                                    <constraint firstAttribute="centerY" secondItem="rY5-A2-b5o" secondAttribute="centerY" id="hP0-EP-gP1"/>
                                     <constraint firstItem="hV6-aX-6Rg" firstAttribute="leading" secondItem="wT1-dV-VED" secondAttribute="leading" id="sTl-qc-ChZ"/>
+                                    <constraint firstAttribute="centerX" secondItem="rY5-A2-b5o" secondAttribute="centerX" id="tsP-YL-jc0"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-q0-hjt">
                                 <rect key="frame" x="300" y="275" width="300" height="275"/>
                                 <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="6Yw-5q-8VV">
+                                        <rect key="frame" x="140" y="128" width="20" height="20"/>
+                                    </activityIndicatorView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QMV-9j-a8d">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="275"/>
                                     </imageView>
@@ -182,8 +200,10 @@
                                     <constraint firstAttribute="bottom" secondItem="BVA-im-kE7" secondAttribute="bottom" id="2Sw-de-LiK"/>
                                     <constraint firstAttribute="trailing" secondItem="QMV-9j-a8d" secondAttribute="trailing" id="4fk-to-tmD"/>
                                     <constraint firstAttribute="bottom" secondItem="QMV-9j-a8d" secondAttribute="bottom" id="9nG-b3-YdR"/>
+                                    <constraint firstAttribute="centerY" secondItem="6Yw-5q-8VV" secondAttribute="centerY" id="IUe-ej-7cq"/>
                                     <constraint firstAttribute="trailing" secondItem="BVA-im-kE7" secondAttribute="trailing" id="JLz-la-bRx"/>
                                     <constraint firstItem="QMV-9j-a8d" firstAttribute="top" secondItem="2zY-q0-hjt" secondAttribute="top" id="Q77-gT-zwp"/>
+                                    <constraint firstAttribute="centerX" secondItem="6Yw-5q-8VV" secondAttribute="centerX" id="X6u-do-rV0"/>
                                     <constraint firstItem="QMV-9j-a8d" firstAttribute="leading" secondItem="2zY-q0-hjt" secondAttribute="leading" id="bwA-aw-XeH"/>
                                     <constraint firstItem="BVA-im-kE7" firstAttribute="leading" secondItem="2zY-q0-hjt" secondAttribute="leading" id="cl9-Ff-7jX"/>
                                 </constraints>
