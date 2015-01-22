@@ -9,6 +9,7 @@
 import Foundation
 
 class Question: NSObject {
+    var shuffled = false
     var characters: [MarvelCharacter]
     
     init(characters: [MarvelCharacter]) {
@@ -17,6 +18,7 @@ class Question: NSObject {
     
     convenience init(characters: [MarvelCharacter], shuffle: Bool) {
         self.init(characters: characters)
+        self.shuffled = shuffle
         
         if shuffle {
             shuffleCharacters()

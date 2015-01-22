@@ -11,6 +11,7 @@ import Foundation
 class Quiz: NSObject {
     var questions = [Question]()
     var currentQuestionIndex = 0
+    var correctAnswers = 0
     
     init(characters: [MarvelCharacter]) {
         for i in (0...9) {
@@ -36,8 +37,12 @@ class Quiz: NSObject {
     }
     
     func scoreQuestion(answer: Bool) {
-        currentQuestionIndex++
+        if let question = currentQuestion() {
+            if !question.shuffled == answer {
+                correctAnswers++
+            }
+        }
         
-        // score the question??
+        currentQuestionIndex++
     }
 }

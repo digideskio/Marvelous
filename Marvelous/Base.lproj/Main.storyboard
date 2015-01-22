@@ -201,7 +201,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="rightButton:" destination="39c-s0-MPg" eventType="touchUpInside" id="df4-a3-Vjc"/>
+                                                    <action selector="correctButton:" destination="39c-s0-MPg" eventType="touchUpInside" id="qdO-lE-4Gb"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -220,6 +220,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="wrongButton:" destination="39c-s0-MPg" eventType="touchUpInside" id="NDS-bA-xlV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94117647059999998" green="0.078431372550000003" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

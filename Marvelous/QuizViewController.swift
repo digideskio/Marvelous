@@ -24,13 +24,12 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var bottomRightImageView: UIImageView!
     @IBOutlet weak var bottomRightNameLabel: UILabel!
     
-    @IBAction func rightButton(sender: AnyObject) {
-        quiz.scoreQuestion(true)
-        if let currentQuestion = quiz.currentQuestion() {
-            populateImages(currentQuestion.characters)
-        } else {
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
+    @IBAction func correctButton(sender: AnyObject) {
+        scoreAnswer(true)
+    }
+    
+    @IBAction func wrongButton(sender: AnyObject) {
+        scoreAnswer(false)
     }
     
     override func viewDidLoad() {
@@ -69,6 +68,23 @@ class QuizViewController: UIViewController {
             UIView.animateWithDuration(0.25) {
                 imageView.alpha = 1
             }
+        }
+    }
+    
+    func scoreAnswer(answer: Bool) {
+        quiz.scoreQuestion(answer)
+        if let currentQuestion = quiz.currentQuestion() {
+            populateImages(currentQuestion.characters)
+        } else {
+            let alert = UIAlertController(title: "Some(Congrats)", message: "\(quiz.correctAnswers) correct answers", preferredStyle: .Alert)
+            
+            let action = UIAlertAction(title: "LOL!", style: .Default) { (action) in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            
+            alert.addAction(action)
+            
+            self.presentViewController(alert, animated: true, nil)
         }
     }
 }
