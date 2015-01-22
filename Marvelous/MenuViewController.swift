@@ -32,7 +32,9 @@ class MenuViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let segueIdentifier = segue.identifier {
             if segueIdentifier == "startQuiz" {
-                (segue.destinationViewController as QuizViewController).characterStore = characterStore
+                let characters = characterStore.pickRandom(40)
+                let quiz = Quiz(characters: characters)
+                (segue.destinationViewController as QuizViewController).quiz = quiz
             }
         }
     }

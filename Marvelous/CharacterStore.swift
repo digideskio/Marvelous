@@ -18,12 +18,12 @@ class CharacterStore: NSObject {
         return characters.filter { $0.imageURL != nil }
     }
     
-    func pickFour() -> [MarvelCharacter] {
+    func pickRandom(count: Int) -> [MarvelCharacter] {
         let valid = validCharacters()
         
         var indicies = [Int]()
         
-        while (indicies.count < 4) {
+        while (indicies.count < count) {
             let index = Int(arc4random_uniform(UInt32(valid.count)))
             if !contains(indicies, index) {
                 indicies.append(index)

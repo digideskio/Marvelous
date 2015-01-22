@@ -10,7 +10,7 @@ import UIKit
 import AlamoFire
 
 class QuizViewController: UIViewController {
-    var characterStore: CharacterStore!
+    var quiz: Quiz!
     
     @IBOutlet weak var topLeftImageView: UIImageView!
     @IBOutlet weak var topLeftNameLabel: UILabel!
@@ -25,7 +25,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var bottomRightNameLabel: UILabel!
     
     override func viewDidLoad() {
-        let characters = characterStore.pickFour()
+        let characters = quiz.characters
         
         fetchImage(characters[0].imageURL!, imageView: topLeftImageView)
         topLeftNameLabel.text = characters[0].name
