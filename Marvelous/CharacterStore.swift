@@ -10,7 +10,7 @@ import Foundation
 
 let storeUpdated = "storeUpdated"
 
-class CharacterStore: NSObject {
+class CharacterStore: NSObject, NSCoding {
     var characters = [MarvelCharacter]()
     var currentOffset = 0
     
@@ -21,12 +21,32 @@ class CharacterStore: NSObject {
         return documentDirectory.stringByAppendingPathComponent("characters.archive")
     }()
     
+    let storeArchivePath: String = {
+        let documentsDirectories = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentDirectory = documentsDirectories.first as String
+        
+        return documentDirectory.stringByAppendingPathComponent("store.archive")
+    }()
+    
     override init() {
         super.init()
         
         if let archivedCharacters = NSKeyedUnarchiver.unarchiveObjectWithFile(charactersArchivePath) as? [MarvelCharacter] {
             characters = archivedCharacters
         }
+        
+        if let archivedStore = NSKeyedUnarchiver.unarchiveObjectWithFile(storeArchivePath) as? CharacterStore {
+            currentOffset = archivedStore.currentOffset
+        }
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        currentOffset = Int(aDecoder.decodeIntForKey("currentOffset"))
+        super.init()
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeInt(Int32(currentOffset), forKey: "currentOffset")
     }
     
     func validCharacters() -> [MarvelCharacter] {
@@ -75,6 +95,7 @@ class CharacterStore: NSObject {
         }
         
         NSKeyedArchiver.archiveRootObject(characters, toFile: charactersArchivePath)
+        NSKeyedArchiver.archiveRootObject(self, toFile: storeArchivePath)
         
         let notification = NSNotification(name: storeUpdated, object: self)
         NSNotificationCenter.defaultCenter().postNotification(notification)
