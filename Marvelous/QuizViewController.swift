@@ -38,6 +38,10 @@ class QuizViewController: UIViewController {
         }
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     func populateImages(characters: [MarvelCharacter]) {
         UIView.animateWithDuration(0.25) {
             self.topLeftImageView.alpha = 0
